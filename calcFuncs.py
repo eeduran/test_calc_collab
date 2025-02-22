@@ -14,16 +14,16 @@ def menu():
     num2 = int(input("Enter second number: "))
     operator_str = input("Enter operation (+, -, *, /): ")
     if operator_str == "+":
-        result = print(addition(num1, num2))
+        result = addition(num1, num2)
         return result
     elif operator_str == "-":
-         result = print(subtraction(num1, num2))
+         result = subtraction(num1, num2)
          return result
     elif operator_str == "*":
-         result = print(multiplication(num1, num2))
+         result = multiplication(num1, num2)
          return result
     elif operator_str == "/":
-         result = print(division(num1, num2))
+         result = division(num1, num2)
          return result
     else:
          print("Invalid choice!")
@@ -46,10 +46,19 @@ def run_again():
      while True:
          answer = input("Do you want to continue? (y/n): ")
          if answer == "y" or answer == "Y":
-             menu()
+             result = menu()
+             print(result)
+             odd_or_even(result)
+             continue
          elif answer == "n" or answer == "N":
              print("Goodbye!")
              break
          else:
              print("Invalid choice!")
              continue
+# Function to check if result is odd or even
+def odd_or_even(result):
+    if result % 2 == 0:
+        print("The result is even.")
+    else:
+        print("The result is odd.")
