@@ -1,5 +1,7 @@
 import calcFuncs as c
 
-operator_variable = input("Enter operator: ")
-c.menu(operator_variable)
 
+result = c.menu()
+print(result)
+c.odd_or_even(result)
+c.run_again()
